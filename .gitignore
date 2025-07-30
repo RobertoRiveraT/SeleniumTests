@@ -1,3 +1,9 @@
+# Ignore everything inside the images folder
+images/*
+
+# But do not ignore the .gitkeep file (or any placeholder)
+!images/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

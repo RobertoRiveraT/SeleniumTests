@@ -1,3 +1,5 @@
+# utils/image_hash_checker.py
+
 import os
 from PIL import Image
 import imagehash
