@@ -70,14 +70,28 @@ print(all_image_hashes_unique("images/pairwise_test"))
   - Every possible *pair of values* across categories is tested at least once.
   - The number of tests is drastically reduced while still achieving strong coverage.
 
-**Example:**
+**Example (real values):**
 - Categories:  
-  - Size: 3 options  
-  - Color: 10 options  
-  - Eyes: 15 options  
-- Full Cartesian product: **3 × 10 × 15 = 450 combinations**  
-- Pairwise (AllPairs): ~30–50 combinations  
-  - All pairs `(Size, Color)`, `(Size, Eyes)`, `(Color, Eyes)` will appear at least once.
+  - Tamaño: 3 options  
+  - Colores: 10 options  
+  - Ojos: 15 options  
+  - Tatuajes: 16 options  
+  - Accesorios: 15 options  
+  - Ropa: 14 options  
+  - Cabello: 13 options  
+  - Sombreros: 16 options  
+  - Objetos: 11 options  
+
+- **Full Cartesian product:**  
+  ```
+  3 × 10 × 15 × 16 × 15 × 14 × 13 × 16 × 11 = 3,459,456,000 combinations
+  ```
+
+- **Pairwise (AllPairs):**  
+  ```
+  ~600–1,200 combinations
+  ```
+  > Every possible pair of values (e.g., `(Tamaño, Colores)`, `(Ojos, Ropa)`, `(Sombreros, Objetos)`) will appear at least once while reducing the total test cases by **99%** compared to the full Cartesian product.
 
 ### Test Flow
 1. Load the Penguin Creator page.
